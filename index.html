@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Abhay Sharma - Portfolio</title>
+</head>
+<body>
+
+    <div class="skip"><a href="#main">Skip to Main Content</a></div>
+    <header>
+		<nav>
+			<ul>
+				<li><a href="index.html" class="underline">About</a></li>
+				<li><a href="funfacts.html">Fun Facts</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+				<li><a href="contact.html">Contact Me</a></li>
+			</ul>
+            <h4>My Personal Website</h4>
+		</nav>
+        <h1>Abhay Sharma</h1>
+	</header>
+
+
+<main>
+<div class="image-container">
+    <img src="images/Headshot_cropped.png" alt="Abhay Sharma Headshot">
+</div>
+
+<div class="container">
+    <p>Welcome to my personal portfolio website!</p>
+    <h2>About Me</h2>
+    <p>Here's a little bit about me:</p>
+    <ul>
+        <li>1. I'm passionate about web development and design.</li>
+        <li>2. I love learning new technologies and improving my skills.</li>
+        <li>3. I am studying Computer Science and Industrial Engineering at the University of Michigan</li>
+        <li>4. In my free time I like solving puzzles and playing water polo!</li>
+    </ul>
+
+    <form id="hobbyForm">
+        <label for="hobby">Enter your favorite hobby:</label>
+        <input type="text" id="hobby" name="hobby">
+        <button type="submit">Submit</button>
+    </form>
+    
+    <div id="result"></div>
+    
+    <script>
+    document.getElementById('hobbyForm').addEventListener('submit', function(event) {
+        event.preventDefault(); 
+    
+        var userHobby = document.getElementById('hobby').value;
+        var response = getResponse(userHobby);
+        
+        document.getElementById('result').textContent = response;
+    });
+    
+    function getResponse(hobby) {
+        switch (hobby.toLowerCase()) {
+            case 'puzzles':
+                return "I love solving puzzles too!";
+            case 'water polo':
+                return "I love playing water polo too!";
+            case 'debate':
+                return "I love competing in debates too!";
+            case 'movies':
+                return "I love watching movies too!";
+            case 'reading':
+                return "I love reading books too!";
+            default:
+                return "Hmm, I've never tried that before, but I would love to try " + hobby + " sometime";
+        }
+    }
+    </script>
+
+    <h2>My Hobbies</h2>
+    <div class="hobbies-container">
+        <div class="hobby-box">
+            <h3>Puzzles</h3>
+            <p>Solving puzzles feels like embarking on an adventure, each clue a hidden treasure waiting to be discovered. From cryptic crosswords to complex jigsaws, the satisfaction of unraveling mysteries fuels my passion for mental challenges.</p>
+        </div>
+        <div class="hobby-box">
+            <h3>Water Polo</h3>
+            <p>For me, water polo is more than a sport—it's a symphony of strength and strategy, a fluid dance where every stroke and goal embodies the exhilaration of pushing limits and triumphing as a team.</p>
+        </div>
+        <div class="hobby-box">
+            <h3>Debate</h3>
+            <p>Debate is my intellectual battleground, where ideas clash and minds sharpen, fueling my drive to articulate, persuade, and ignite change through the power of words.</p>
+        </div>
+        <div class="hobby-box">
+            <h3>Movies</h3>
+            <p>Movies are my gateway to different worlds, where emotions intertwine with imagination, fueling my passion to explore diverse perspectives and narratives that resonate deeply within my soul.</p>
+        </div>
+        <div class="hobby-box">
+            <h3>Reading</h3>
+            <p>Reading is my sanctuary, where each page is a portal to boundless adventures and profound insights, fueling my imagination and nurturing my thirst for knowledge and empathy.</p>
+        </div>
+        <div class="hobby-box">
+            <h3>Woodwork</h3>
+            <p>Woodwork is my artistry in motion, where each cut and carve tells a story of patience, precision, and passion, transforming raw timber into cherished creations that whisper of craftsmanship and soul.</p>
+        </div>
+    </div>
+</div>
+</main>
+
+<footer>
+    <a href="https://www.linkedin.com/in/abhaysha/" target="_blank">
+        <img src="images/linkedinlogo.png" width=35px alt="linkedin link">
+      </a>
+
+      <p>My Social Media</p>
+
+      <a href="https://www.facebook.com/UniversityOfMichigan/" target="_blank">
+        <img src="images/facebooklogo.png" width=35px alt="facebook link">
+      </a>
+  </footer>
+
+</body>
+</html>
